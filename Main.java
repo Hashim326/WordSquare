@@ -32,6 +32,6 @@ public class Main {
         System.out.println("Row Size: " + rowSize);
         System.out.println("Input String: " + inputString);
 
-        Dictionary dict = new Dictionary();
+        Dictionary dict = new Dictionary(rowSize);
     }
 }

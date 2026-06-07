@@ -6,11 +6,13 @@ import java.util.HashSet;
 public class Dictionary {
     public HashSet<String> words = new HashSet<>();
 
-    public Dictionary() {
+    public Dictionary(int wordLength) {
     try (BufferedReader br = new BufferedReader(new FileReader("dictionary.txt"))) {
       String line;
       while ((line = br.readLine()) != null) {
-        words.add(line);
+        if (line.length() == wordLength) {
+          words.add(line);
+        }
       }
     } catch (IOException e) {
       System.out.println("Error reading file.");
