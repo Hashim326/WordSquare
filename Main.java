@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Main {
     
 
@@ -32,6 +34,11 @@ public class Main {
         System.out.println("Row Size: " + rowSize);
         System.out.println("Input String: " + inputString);
 
-        Dictionary dict = new Dictionary(rowSize);
+        HashMap<Character, Integer> charCount = new HashMap<>();
+        for (char c : inputString.toCharArray()) {
+            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+        }
+        
+        Dictionary dict = new Dictionary(rowSize, charCount);
     }
 }
