@@ -44,7 +44,7 @@ public class Main {
         WordSquareBuilder builder = new WordSquareBuilder(dict, rowSize);
         List<String> wordSquare = builder.buildWordSquare(charCount);
 
-        if (wordSquare.isEmpty()) {
+        if (wordSquare == null || wordSquare.isEmpty()) {
             System.out.println("No valid word square found.");
         } else {
             System.out.println("Word Square:");
