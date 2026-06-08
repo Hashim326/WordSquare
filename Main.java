@@ -35,6 +35,8 @@ public class Main {
         System.out.println("Row Size: " + rowSize);
         System.out.println("Input String: " + inputString);
 
+        inputString = inputString.toLowerCase();
+
         HashMap<Character, Integer> charCount = new HashMap<>();
         for (char c : inputString.toCharArray()) {
             charCount.put(c, charCount.getOrDefault(c, 0) + 1);
