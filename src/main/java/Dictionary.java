@@ -22,6 +22,10 @@ public class Dictionary {
         }
     }
 
+    public Dictionary(HashSet<String> words) {
+        this.words = new HashSet<>(words);
+    }
+
     private boolean isValidWord(String word, HashMap<Character, Integer> charCount) {
         HashMap<Character, Integer> tempCount = new HashMap<>(charCount);
         for (char c : word.toCharArray()) {
