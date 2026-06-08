@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.List;
 
 public class Main {
     
@@ -40,5 +41,18 @@ public class Main {
         }
         
         Dictionary dict = new Dictionary(rowSize, charCount);
+        WordSquareBuilder builder = new WordSquareBuilder(dict, rowSize);
+        List<String> wordSquare = builder.buildWordSquare(charCount);
+
+        if (wordSquare.isEmpty()) {
+            System.out.println("No valid word square found.");
+        } else {
+            System.out.println("Word Square:");
+            for (String word : wordSquare) {
+                System.out.println(word);
+            }
+        }
+
+        return;
     }
 }
