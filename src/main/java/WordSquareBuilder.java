@@ -33,7 +33,7 @@ public class WordSquareBuilder {
         if (currentSquare.size() == rowSize) {
             return new ArrayList<>(currentSquare);
         }
-
+        
         for (String word : availableWords) {
             if (currentSquare.contains(word)) {
                 continue;
